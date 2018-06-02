@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gif on TBD</title>
+    <link>/tags/gif/</link>
+    <description>Recent content in Gif on TBD</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 02 Jun 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/gif/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PBLs and Sunshine</title>
+      <link>/2018/06/02/pbl-networks-rmd/</link>
+      <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/06/02/pbl-networks-rmd/</guid>
+      <description>It’s finally summertime here in New York, which means bike season is upon us. Since the turn of the millennium, cycling as a mode of transportation has exploded in the US; the Census Bureau recorded a 60 percent increase in bike commuting between 2000 and 2012. This increase in participation has gone hand in hand with the expansion of biking facilities and infrastructure.</description>
+    </item>
+    
+  </channel>
+</rss>

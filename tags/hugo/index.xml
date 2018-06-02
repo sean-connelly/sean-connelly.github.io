@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on TBD</title>
-    <link>https://sean-connelly.github.io/tags/hugo/</link>
+    <link>/tags/hugo/</link>
     <description>Recent content in Hugo on TBD</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 04 May 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://sean-connelly.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>First GitHub Pages Post!</title>
-      <link>https://sean-connelly.github.io/2018/05/04/first-post-rmd/</link>
+      <link>/2018/05/04/first-post-rmd/</link>
       <pubDate>Fri, 04 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://sean-connelly.github.io/2018/05/04/first-post-rmd/</guid>
+      <guid>/2018/05/04/first-post-rmd/</guid>
       <description>New HomeHi there - how do you like the new digs? After a brief hiatus during grad school application season, I found myself ready to dive back into data, but extremely frustrated with GitHub documents as a medium to share my work. Enter blogdown and GitHub Pages! The blogdown R package makes it easy to create a website using nothing but R Markdown, and then host it on your free personal GitHub URL.</description>
     </item>
     
