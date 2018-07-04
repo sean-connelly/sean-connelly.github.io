@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Transit on TBD</title>
+    <link>/tags/transit/</link>
+    <description>Recent content in Transit on TBD</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 04 Jul 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/transit/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Voters&#39; Windshield Perspective</title>
+      <link>/2018/07/04/census-mapping-rmd/</link>
+      <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/07/04/census-mapping-rmd/</guid>
+      <description>Happy Fourth of July! Given the holiday, I thought it would be fitting to look at the intersection of politics and transportation. Last week, Alexandria Ocasio-Cortez, a 28-year-old democratic socialist, defeated Joe Crowley, the incumbent who was tapped as the next Democratic House Speaker, in the New York 14th Congressional District (NY-14) primary. Ocasio-Cortez’s victory made national news, which is no surprise given the natural story lines (grassroots versus establishment, etc.</description>
+    </item>
+    
+  </channel>
+</rss>

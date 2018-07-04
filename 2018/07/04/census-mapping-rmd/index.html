@@ -1,0 +1,838 @@
+
+
+  
+    
+  
+
+
+  
+
+
+
+
+  
+
+
+  
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Hugo 0.40.2 with theme Tranquilpeak 0.4.3-BETA">
+    <title>Voters&#39; Windshield Perspective</title>
+    <meta name="author" content="Sean Connelly">
+    <meta name="keywords" content="">
+
+    <link rel="icon" href="/favicon.png">
+    
+
+    
+    <meta name="description" content="Happy Fourth of July! Given the holiday, I thought it would be fitting to look at the intersection of politics and transportation. Last week, Alexandria Ocasio-Cortez, a 28-year-old democratic socialist, defeated Joe Crowley, the incumbent who was tapped as the next Democratic House Speaker, in the New York 14th Congressional District (NY-14) primary. Ocasio-Cortez’s victory made national news, which is no surprise given the natural story lines (grassroots versus establishment, etc.">
+    <meta property="og:description" content="Happy Fourth of July! Given the holiday, I thought it would be fitting to look at the intersection of politics and transportation. Last week, Alexandria Ocasio-Cortez, a 28-year-old democratic socialist, defeated Joe Crowley, the incumbent who was tapped as the next Democratic House Speaker, in the New York 14th Congressional District (NY-14) primary. Ocasio-Cortez’s victory made national news, which is no surprise given the natural story lines (grassroots versus establishment, etc.">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Voters&#39; Windshield Perspective">
+    <meta property="og:url" content="/2018/07/04/census-mapping-rmd/">
+    <meta property="og:site_name" content="TBD">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="TBD">
+    <meta name="twitter:description" content="Happy Fourth of July! Given the holiday, I thought it would be fitting to look at the intersection of politics and transportation. Last week, Alexandria Ocasio-Cortez, a 28-year-old democratic socialist, defeated Joe Crowley, the incumbent who was tapped as the next Democratic House Speaker, in the New York 14th Congressional District (NY-14) primary. Ocasio-Cortez’s victory made national news, which is no surprise given the natural story lines (grassroots versus establishment, etc.">
+    
+    
+
+    
+    
+
+    
+      <meta property="og:image" content="//www.gravatar.com/avatar/33f1336413b9562bd8f7eaf5293e7594?s=640">
+    
+
+    
+      <meta property="og:image" content="http://res.cloudinary.com/dfngkha36/image/upload/c_scale,h_400,w_750/v1530733042/StockSnap_CensusMapping.jpg">
+    
+    
+      <meta property="og:image" content="http://res.cloudinary.com/dfngkha36/image/upload/c_scale,w_1920/v1530733042/StockSnap_CensusMapping.jpg">
+    
+    
+
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="/css/style-jsjn0006wyhpyzivf6yceb31gvpjatbcs3qzjvlumobfnugccvobqwxnnaj8.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="/">TBD</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="//www.gravatar.com/avatar/33f1336413b9562bd8f7eaf5293e7594?s=90" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="/#about">
+          <img class="sidebar-profile-picture" src="//www.gravatar.com/avatar/33f1336413b9562bd8f7eaf5293e7594?s=110" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Sean Connelly</h4>
+        
+          <h5 class="sidebar-profile-bio">Raised outside of Chicago, schooled in Boston and London, now your friendly neighborhood civil servant</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/sean-connelly">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.linkedin.com/in/sean-connelly-0366226b/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
+      
+      <span class="sidebar-button-desc">LinkedIN</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+  <div class="post-header-cover
+              text-left
+              "
+       style="background-image:url('http://res.cloudinary.com/dfngkha36/image/upload/c_scale,w_1920/v1530733042/StockSnap_CensusMapping.jpg')"
+       data-behavior="4">
+    
+      <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      Voters&#39; Windshield Perspective
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-07-04T00:00:00Z">
+        
+  
+  
+  
+  
+    July 4, 2018
+  
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="/categories/r">R</a>
+    
+  
+
+  </div>
+
+</div>
+    
+  </div>
+
+
+      <div id="main" data-behavior="4"
+        class="hasCover
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>
+<p>Happy Fourth of July! Given the holiday, I thought it would be fitting to look at the intersection of politics and transportation. Last week, Alexandria Ocasio-Cortez, a 28-year-old democratic socialist, defeated Joe Crowley, the incumbent who was tapped as the next Democratic House Speaker, in the New York 14th Congressional District (NY-14) primary. Ocasio-Cortez’s victory made national news, which is no surprise given the natural story lines (grassroots versus establishment, etc.), but one particular aspect of her campaign has gotten an unusual amount of attention - her advertisement.</p>
+<p>Ocasio-Cortez posted a video ad about a month before election day, and it’s fair to say it made an impression - at the time of writing, it has close to <a href="https://www.youtube.com/watch?v=rq3QXIVR0bs">500,000 views</a>. What struck me is how, well, <em>normal</em> the candidate is; every New Yorker can relate to the shots of bodegas, parks, apartments and subway trains. Even the New York Times’ post-election <a href="https://www.nytimes.com/2018/06/27/nyregion/ocasio-cortez-crowley-primary-upset.html">autopsy</a> highlights this fact:</p>
+<blockquote>
+<p>She [Ocasio-Cortez] rode subway trains in hers. He [Crowley] drove a car in his.</p>
+</blockquote>
+<p>There have been a lot of great write-ups breaking down the election, but I particularly like <a href="https://theintercept.com/2018/07/01/ocasio-cortez-data-suggests-that-gentrifying-neighborhoods-powered-alexandria-ocasio-cortezs-victory-over-the-democratic-establishment/">The Intercept’s</a>, which includes awesome precinct-level maps prepared by the City University of New York’s Center for Urban Research. The demographic data suggests that Ocasio-Cortez’s support was actually strongest in gentrifying, mixed neighborhoods. The transit nerd in me is curious if there was also a correlation with commuting mode - straphangers for Ocasio-Cortez, drivers for Crowley.</p>
+<p>The US Census Bureau tracks “Means of Transportation” in the Census and American Community Survey (ACS). Kyle Walker, a Geography professor at TCU, developed the incredible <a href="https://github.com/walkerke/tidycensus">tidycensus</a> package, which allows us to pull data from the Census and ACS for any desired area. I’m going to use the ACS to grab mode share numbers simply because it offers a more recent snapshot of the district, but we should be cautious since the ACS only provides an estimate - I suggest Walker’s <a href="https://walkerke.github.io/tidycensus/articles/margins-of-error.html">explanation</a> if you would like to learn more. Anyway, the code chunk below grabs the variables we are interested in, and subsets the data to only those Census Tracts entirely within NY-14:</p>
+<pre class="r"><code>knitr::opts_chunk$set(message = F,warning = F,fig.align = &quot;center&quot;)
+
+library(hrbrthemes);library(tidyverse)
+library(tidycensus);library(USAboundaries);library(ggmap)
+library(lubridate);library(viridis);library(scales)
+library(sf);library(tigris);library(janitor)
+
+#Options, call stored Census API key you&#39;ll have to set one up if you don&#39;t have already
+options(scipen = 1000,stringsAsFactors = F,tigris_use_cache = T)
+invisible(Sys.getenv(&quot;CENSUS_API_KEY&quot;))</code></pre>
+<pre class="r"><code>#=============
+#Import census data
+#=============
+
+#Means of transportation variables
+transport_vars &lt;- c(&quot;Car&quot;         =   &quot;B08301_002&quot;,
+                    &quot;Transit&quot;     =   &quot;B08301_010&quot;,
+                    &quot;Taxi&quot;        =   &quot;B08301_016&quot;,
+                    &quot;Motorcycle&quot;  =   &quot;B08301_017&quot;,     
+                    &quot;Bicycle&quot;     =   &quot;B08301_018&quot;,
+                    &quot;Walk&quot;        =   &quot;B08301_019&quot;,
+                    &quot;Other&quot;       =   &quot;B08301_020&quot;,
+                    &quot;Home&quot;        =   &quot;B08301_021&quot;)
+  
+#Grab mode share data from 2012-2016 ACS for Queens and the Bronx
+ny14 &lt;- get_acs(state = &quot;NY&quot;,county = c(&quot;Queens&quot;,&quot;Bronx&quot;),geography = &quot;tract&quot;,
+                variables = transport_vars,geometry = T,cb = F) %&gt;% 
+  st_transform(4326)
+
+#=============
+#Make sure spatial geometries are right (clip water, within NY-14)
+#=============
+
+#Clip tract boundaries to water line (from Kyle Walker&#39;s package vignette)
+st_erase &lt;- function(x, y) { st_difference(x, st_union(st_combine(y))) }
+
+queens_water &lt;- area_water(state = &quot;NY&quot;,county = &quot;Queens&quot;,class = &quot;sf&quot;) %&gt;%
+  st_transform(4326)
+bronx_water &lt;- area_water(state = &quot;NY&quot;,county = &quot;Bronx&quot;,class = &quot;sf&quot;) %&gt;%
+  st_transform(4326)
+
+ny14 &lt;- st_erase(ny14,queens_water)
+ny14 &lt;- st_erase(ny14,bronx_water)
+
+#Load NY-14 Congressional District
+ny_congress &lt;- us_congressional(states = &quot;New York&quot;,resolution = &quot;high&quot;) %&gt;% 
+  filter(cd115fp==&quot;14&quot;) %&gt;% 
+  select(cd115fp) %&gt;% 
+  st_transform(4326)
+
+#Restrict transit data to tracts entirely within NY-14
+ny14 &lt;- st_join(ny14,ny_congress,join = st_within,left = F)
+
+#=============
+#Tweak fields
+#=============
+
+#Drop MOE for this case, really using estimates for illustrative purposes
+#Collapse modes into desired groups
+ny14 &lt;- ny14 %&gt;% 
+  select(-moe,-cd115fp) %&gt;% 
+  spread(variable,estimate,fill = 0) %&gt;% 
+  mutate(&quot;PMV&quot; = Car + Motorcycle) %&gt;% 
+  select(GEOID,NAME,PMV,Transit,Bicycle,Walk,Taxi,Home)
+
+head(ny14)</code></pre>
+<pre><code>## Simple feature collection with 6 features and 8 fields
+## geometry type:  POLYGON
+## dimension:      XY
+## bbox:           xmin: -73.84043 ymin: 40.80482 xmax: -73.81002 ymax: 40.82969
+## epsg (SRID):    4326
+## proj4string:    +proj=longlat +datum=WGS84 +no_defs
+##         GEOID                                     NAME  PMV Transit
+## 1 36005011000 Census Tract 110, Bronx County, New York   38      43
+## 2 36005013000 Census Tract 130, Bronx County, New York  497     226
+## 3 36005013200 Census Tract 132, Bronx County, New York 2300    1020
+## 4 36005014400 Census Tract 144, Bronx County, New York  643    1066
+## 5 36005015200 Census Tract 152, Bronx County, New York  775     443
+## 6 36005015800 Census Tract 158, Bronx County, New York  289     200
+##   Bicycle Walk Taxi Home                       geometry
+## 1       0    0    0   13 POLYGON ((-73.84007 40.8136...
+## 2       0    7    0   43 POLYGON ((-73.81889 40.8218...
+## 3      11  235    0    2 POLYGON ((-73.82751 40.8151...
+## 4       0   93    0    1 POLYGON ((-73.82946 40.8223...
+## 5       0   24   11   16 POLYGON ((-73.83094 40.8269...
+## 6       0   27    0   18 POLYGON ((-73.82168 40.8262...</code></pre>
+<p>
+<p>Now that we’ve got mode share by Census Tract, we have to decide how to visualize it. Choropleths can be great - they can display the majority mode or candidate or race for a given geographic area, but our main focus here is on individuals, rather than generalizing by tract. Dot density maps, in which a dot symbolizing a certain number of people is plotted at random within a specific spatial shape, do a good job representing the complexity on the ground. The dominant mode share should change along a gradient, rather than a discrete scale. The algorithm below is used to generate these dots for NY-14, and is lifted directly from Paul Campbell’s excellent <a href="https://www.cultureofinsight.com/blog/2018/05/02/2018-04-08-multivariate-dot-density-maps-in-r-with-sf-ggplot2/">blog post</a>:</p>
+<pre class="r"><code>#=============
+#Generate dots
+#=============
+
+#This code chunk is from Paul Campbell&#39;s Culture of Insight post:
+#https://www.cultureofinsight.com/blog/2018/05/02/2018-04-08-multivariate-dot-density-maps-in-r-with-sf-ggplot2/
+#Round number of dots randomly
+random_round &lt;- function(x) {
+    v = as.integer(x)
+    r = x - v
+    test = runif(length(r), 0.0, 1.0)
+    add = rep(as.integer(0),length(r))
+    add[r&gt;test] &lt;- as.integer(1)
+    value = v + add
+    ifelse(is.na(value) | value&lt;0,0,value)
+    return(value)
+  }
+
+#Number of dots to plot for each mode (1 for every 100 people)
+num_dots &lt;- as.data.frame(ny14) %&gt;% 
+  select(PMV:Home) %&gt;% 
+  mutate_all(funs(as.numeric(.)/100)) %&gt;% 
+  mutate_all(random_round)
+
+#Generates coordinates for each point + what mode it represents
+ny14_dots &lt;- map_df(names(num_dots), 
+                    ~ st_sample(ny14,size = num_dots[,.x],type = &quot;random&quot;) %&gt;%
+                      st_cast(&quot;POINT&quot;) %&gt;%                  
+                      st_coordinates() %&gt;%                                          
+                      as_tibble() %&gt;%
+                      setNames(c(&quot;lon&quot;,&quot;lat&quot;)) %&gt;%
+                      mutate(Mode = .x)) %&gt;%
+  slice(sample(1:n())) #Randomize plot order
+
+#Make mode a factor for plotting
+ny14_dots &lt;- ny14_dots %&gt;% 
+  mutate(Mode = as_factor(Mode) %&gt;% 
+           fct_relevel(&quot;PMV&quot;,&quot;Transit&quot;,&quot;Walk&quot;,&quot;Bicycle&quot;,&quot;Taxi&quot;,&quot;Home&quot;))
+
+head(ny14_dots)</code></pre>
+<pre><code>## # A tibble: 6 x 3
+##     lon   lat Mode   
+##   &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;  
+## 1 -73.9  40.8 PMV    
+## 2 -73.9  40.8 PMV    
+## 3 -73.8  40.8 PMV    
+## 4 -73.8  40.8 Transit
+## 5 -73.9  40.8 Transit
+## 6 -73.9  40.7 PMV</code></pre>
+<p>
+<p>Armed with the dots data frame, we can now plot our map:</p>
+<pre class="r"><code>#=============
+#Dot density map
+#=============
+
+#Color palette
+pal &lt;- c(&quot;PMV&quot; = &quot;#d18975&quot;,
+         &quot;Transit&quot; = &quot;#8fd175&quot;,
+         &quot;Walk&quot; = &quot;#3f2d54&quot;,
+         &quot;Bicycle&quot; = &quot;#75b8d1&quot;,
+         &quot;Taxi&quot; = &quot;#2d543d&quot;,
+         &quot;Home&quot; = &quot;#c9d175&quot;) 
+
+#Basemap for district
+bbox &lt;- st_bbox(ny_congress) %&gt;%
+  as.vector()
+  
+basemap &lt;- get_map(location = bbox,zoom = 12,color = &quot;bw&quot;)
+
+#Plot dot density
+plot_ny14 &lt;- ggmap(basemap) +
+  geom_sf(data = ny_congress,fill = &quot;transparent&quot;,color = &quot;goldenrod&quot;,
+          size = 1.5,inherit.aes = F) +
+  geom_point(data = ny14_dots,aes(lon,lat,color = Mode),
+             size = 1,inherit.aes = F) +
+  scale_color_manual(values = pal) +
+  coord_sf(datum = NA) +
+  labs(x = NULL, y = NULL,
+       title = &quot;How NY-14 Commutes\n&quot;,
+       subtitle = &quot;1 dot = 100 people&quot;,
+       caption = &quot;Data Source: 2012-2016 ACS&quot;) +
+  theme_ipsum(grid = F,base_size = 16,plot_title_size = 16,subtitle_size = 16,
+              caption_size = 16,strip_text_size = 16,axis_text_size = 16) +
+  guides(color = guide_legend(override.aes = list(size = 5))) +
+  theme(axis.text.x = element_blank(),
+        axis.text.y = element_blank(),
+        legend.text = element_text(size = 16)) +
+  theme(legend.position = c(0.8,1.035),legend.direction = &quot;horizontal&quot;)
+
+#Save high resolution picture 
+ggsave(&quot;2018-07-04-census-mapping_files/ny14_points.png&quot;,
+       plot = plot_ny14,dpi = 640,width = 12, height = 12, units = &quot;in&quot;)</code></pre>
+<div class="figure">
+<img src="/post/2018-07-04-census-mapping_files/ny14_points.png" />
+
+</div>
+And here is the precinct breakdown from The Intercept article:
+<p>
+<img src="https://theintercept.imgix.net/wp-uploads/sites/1/2018/06/Screen-Shot-2018-06-29-at-3.17.39-PM-1530299880.png?auto=compress%2Cformat&amp;q=90" />
+<p>
+<p>At a glance, things seem to line up pretty well. Neighborhoods where more people drive a private motor vehicle, or PMV, to work (more red than green) tended to also vote for Crowley, while places where individuals have more sustainable and active commutes (green, purple, blue) correspond with areas that went to Ocasio-Cortez. Transportation mode may not be the most predictive variable, but looking at how people get to work can provide some additional prospective.</p>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="/tags/transit/">Transit</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/congress/">Congress</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/sf/">SF</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/tidycensus/">Tidycensus</a>
+
+                  </div>
+                
+              
+            
+            
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/06/02/pbl-networks-rmd/" data-tooltip="PBLs and Sunshine">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2018/07/04/census-mapping-rmd/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2018/07/04/census-mapping-rmd/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/2018/07/04/census-mapping-rmd/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2018 Sean Connelly. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2018/06/02/pbl-networks-rmd/" data-tooltip="PBLs and Sunshine">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2018/07/04/census-mapping-rmd/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2018/07/04/census-mapping-rmd/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/2018/07/04/census-mapping-rmd/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2F2018%2F07%2F04%2Fcensus-mapping-rmd%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=%2F2018%2F07%2F04%2Fcensus-mapping-rmd%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=%2F2018%2F07%2F04%2Fcensus-mapping-rmd%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="//www.gravatar.com/avatar/33f1336413b9562bd8f7eaf5293e7594?s=110" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Sean Connelly</h4>
+    
+      <div id="about-card-bio">Raised outside of Chicago, schooled in Boston and London, now your friendly neighborhood civil servant</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Senior Policy and Planning Analyst at the New York County District Attorney&rsquo;s Office
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        New York, NY, USA
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="Search" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center">no post found</div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="/2018/07/04/census-mapping-rmd/">
+                <h3 class="media-heading">Voters&#39; Windshield Perspective</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jul 7, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Happy Fourth of July! Given the holiday, I thought it would be fitting to look at the intersection of politics and transportation. Last week, Alexandria Ocasio-Cortez, a 28-year-old democratic socialist, defeated Joe Crowley, the incumbent who was tapped as the next Democratic House Speaker, in the New York 14th Congressional District (NY-14) primary. Ocasio-Cortez’s victory made national news, which is no surprise given the natural story lines (grassroots versus establishment, etc.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="/2018/06/02/pbl-networks-rmd/">
+                <h3 class="media-heading">PBLs and Sunshine</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">It’s finally summertime here in New York, which means bike season is upon us. Since the turn of the millennium, cycling as a mode of transportation has exploded in the US; the Census Bureau recorded a 60 percent increase in bike commuting between 2000 and 2012. This increase in participation has gone hand in hand with the expansion of biking facilities and infrastructure.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="/2018/05/04/first-post-rmd/">
+                <h3 class="media-heading">First GitHub Pages Post!</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  May 5, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">New HomeHi there - how do you like the new digs? After a brief hiatus during grad school application season, I found myself ready to dive back into data, but extremely frustrated with GitHub documents as a medium to share my work. Enter blogdown and GitHub Pages! The blogdown R package makes it easy to create a website using nothing but R Markdown, and then host it on your free personal GitHub URL.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero="no post found"
+         data-message-one="1 post found"
+         data-message-other="{n} posts found">
+         3 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('/images/cover.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = '\/2018\/07\/04\/census-mapping-rmd\/';
+          
+            this.page.identifier = '\/2018\/07\/04\/census-mapping-rmd\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'hugo-tranquilpeak-theme';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+    
+  </body>
+</html>
+

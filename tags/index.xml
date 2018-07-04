@@ -30,6 +30,15 @@
     </item>
     
     <item>
+      <title>Congress</title>
+      <link>/tags/congress/</link>
+      <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/congress/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Gif</title>
       <link>/tags/gif/</link>
       <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
@@ -68,9 +77,27 @@
     <item>
       <title>Sf</title>
       <link>/tags/sf/</link>
-      <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/sf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tidycensus</title>
+      <link>/tags/tidycensus/</link>
+      <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/tidycensus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Transit</title>
+      <link>/tags/transit/</link>
+      <pubDate>Wed, 04 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/transit/</guid>
       <description></description>
     </item>
     
