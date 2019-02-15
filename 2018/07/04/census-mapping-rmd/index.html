@@ -106,7 +106,7 @@
         </a>
         <h4 class="sidebar-profile-name">Sean Connelly</h4>
         
-          <h5 class="sidebar-profile-bio">Raised outside of Chicago, schooled in Boston and London, now your friendly neighborhood civil servant</h5>
+          <h5 class="sidebar-profile-bio">Recovering civil servant and data nerd who took the long way home <br> CHI &gt; BOS &gt; LDN &gt; NYC &gt; CHI</h5>
         
       </div>
     
@@ -144,16 +144,6 @@
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="/archives">
-    
-      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
-      
-      <span class="sidebar-button-desc">Archives</span>
-    </a>
-  </li>
-
-  <li class="sidebar-button">
-    
       <a class="sidebar-button-link " href="/#about">
     
       <i class="sidebar-button-icon fa fa-lg fa-question"></i>
@@ -182,7 +172,17 @@
     
       <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
       
-      <span class="sidebar-button-desc">LinkedIN</span>
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/files/sean_connelly_resume.pdf">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-file"></i>
+      
+      <span class="sidebar-button-desc">Resume</span>
     </a>
   </li>
 
@@ -338,19 +338,19 @@ head(ny14)</code></pre>
 ## epsg (SRID):    4326
 ## proj4string:    +proj=longlat +datum=WGS84 +no_defs
 ##         GEOID                                     NAME  PMV Transit
-## 1 36005011000 Census Tract 110, Bronx County, New York   38      43
-## 2 36005013000 Census Tract 130, Bronx County, New York  497     226
-## 3 36005013200 Census Tract 132, Bronx County, New York 2300    1020
-## 4 36005014400 Census Tract 144, Bronx County, New York  643    1066
-## 5 36005015200 Census Tract 152, Bronx County, New York  775     443
-## 6 36005015800 Census Tract 158, Bronx County, New York  289     200
+## 1 36005011000 Census Tract 110, Bronx County, New York   27      15
+## 2 36005013000 Census Tract 130, Bronx County, New York  537     213
+## 3 36005013200 Census Tract 132, Bronx County, New York 2251     997
+## 4 36005014400 Census Tract 144, Bronx County, New York  605     917
+## 5 36005015200 Census Tract 152, Bronx County, New York  893     395
+## 6 36005015800 Census Tract 158, Bronx County, New York  231     230
 ##   Bicycle Walk Taxi Home                       geometry
-## 1       0    0    0   13 POLYGON ((-73.84007 40.8136...
-## 2       0    7    0   43 POLYGON ((-73.81889 40.8218...
-## 3      11  235    0    2 POLYGON ((-73.82751 40.8151...
-## 4       0   93    0    1 POLYGON ((-73.82946 40.8223...
-## 5       0   24   11   16 POLYGON ((-73.83094 40.8269...
-## 6       0   27    0   18 POLYGON ((-73.82168 40.8262...</code></pre>
+## 1       0    0    0   12 POLYGON ((-73.84007 40.8136...
+## 2       0   14    0    3 POLYGON ((-73.81889 40.8218...
+## 3       0  196    0   37 POLYGON ((-73.82751 40.8151...
+## 4       0  114    0    0 POLYGON ((-73.82946 40.8223...
+## 5       0   27    6   19 POLYGON ((-73.83094 40.8269...
+## 6       0   25    0   17 POLYGON ((-73.82168 40.8262...</code></pre>
 <p>
 <p>Now that we’ve got mode share by Census Tract, we have to decide how to visualize it. Choropleths can be great - they can display the majority mode or candidate or race for a given geographic area, but our main focus here is on individuals, rather than generalizing by tract. Dot density maps, in which a dot symbolizing a certain number of people is plotted at random within a specific spatial shape, do a good job representing the complexity on the ground. The dominant mode share should change along a gradient, rather than a discrete scale. The algorithm below is used to generate these dots for NY-14, and is lifted directly from Paul Campbell’s excellent <a href="https://www.cultureofinsight.com/blog/2018/05/02/2018-04-08-multivariate-dot-density-maps-in-r-with-sf-ggplot2/">blog post</a>:</p>
 <pre class="r"><code>#=============
@@ -396,12 +396,12 @@ head(ny14_dots)</code></pre>
 <pre><code>## # A tibble: 6 x 3
 ##     lon   lat Mode   
 ##   &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;  
-## 1 -73.9  40.8 PMV    
-## 2 -73.9  40.9 PMV    
-## 3 -73.9  40.8 Transit
-## 4 -73.9  40.7 Walk   
-## 5 -73.9  40.9 Transit
-## 6 -73.9  40.9 Transit</code></pre>
+## 1 -73.9  40.7 Transit
+## 2 -73.8  40.8 Transit
+## 3 -73.9  40.8 PMV    
+## 4 -73.9  40.8 Transit
+## 5 -73.8  40.8 PMV    
+## 6 -73.9  40.8 Transit</code></pre>
 <p>
 <p>Armed with the dots data frame, we can now plot our map:</p>
 <pre class="r"><code>#=============
@@ -453,7 +453,7 @@ And here is the precinct breakdown from The Intercept article:
 <p>
 <img src="https://theintercept.imgix.net/wp-uploads/sites/1/2018/06/Screen-Shot-2018-06-29-at-3.17.39-PM-1530299880.png?auto=compress%2Cformat&amp;q=90" />
 <p>
-<p>At a glance, things seem to line up pretty well. Neighborhoods where more people drive a private motor vehicle, or PMV, to work (more red than green) tended to also vote for Crowley, while places where individuals have more sustainable and active commutes (green, purple, blue) correspond with areas that went to Ocasio-Cortez. Transportation mode may not be the most predictive variable, but looking at how people get to work can provide some additional prospective.</p>
+<p>At a glance, things seem to line up pretty well. Neighborhoods where more people drive a private motor vehicle, or PMV, to work (more red than green) tended to also vote for Crowley, while places where individuals have more sustainable and active commutes (green, purple, blue) correspond with areas that went to Ocasio-Cortez. Transportation mode may not be the most predictive variable, but looking at how people get to work can provide some additional perspective.</p>
 
               
             </div>
@@ -558,7 +558,7 @@ And here is the precinct breakdown from The Intercept article:
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2018 Sean Connelly. All Rights Reserved
+    &copy; 2019 Sean Connelly. All Rights Reserved
   </span>
 </footer>
 
@@ -671,20 +671,20 @@ And here is the precinct breakdown from The Intercept article:
     
     <h4 id="about-card-name">Sean Connelly</h4>
     
-      <div id="about-card-bio">Raised outside of Chicago, schooled in Boston and London, now your friendly neighborhood civil servant</div>
+      <div id="about-card-bio">Recovering civil servant and data nerd who took the long way home <br> CHI &gt; BOS &gt; LDN &gt; NYC &gt; CHI</div>
     
     
       <div id="about-card-job">
         <i class="fa fa-briefcase"></i>
         <br/>
-        Senior Policy and Planning Analyst at the New York County District Attorney&rsquo;s Office
+        Masters in Urban Planning and Policy student at UIC
       </div>
     
     
       <div id="about-card-location">
         <i class="fa fa-map-marker"></i>
         <br/>
-        New York, NY, USA
+        Chicago, IL, USA
       </div>
     
   </div>
@@ -775,7 +775,7 @@ And here is the precinct breakdown from The Intercept article:
     
   
     
-    <div id="cover" style="background-image:url('/images/cover.jpg');"></div>
+    <div id="cover" style="background-image:url('/images/StockSnap_River_Winter.jpg');"></div>
   
 
 
