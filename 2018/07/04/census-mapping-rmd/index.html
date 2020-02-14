@@ -68,6 +68,10 @@
     <link rel="stylesheet" href="/css/style-jsjn0006wyhpyzivf6yceb31gvpjatbcs3qzjvlumobfnugccvobqwxnnaj8.min.css" />
     
     
+      
+        <link rel="stylesheet"  href="/css/cover_overlay.css">
+      
+    
 
     
       
@@ -331,26 +335,7 @@ ny14 &lt;- ny14 %&gt;%
   select(GEOID,NAME,PMV,Transit,Bicycle,Walk,Taxi,Home)
 
 head(ny14)</code></pre>
-<pre><code>## Simple feature collection with 6 features and 8 fields
-## geometry type:  POLYGON
-## dimension:      XY
-## bbox:           xmin: -73.84043 ymin: 40.80482 xmax: -73.81002 ymax: 40.82969
-## epsg (SRID):    4326
-## proj4string:    +proj=longlat +datum=WGS84 +no_defs
-##         GEOID                                     NAME  PMV Transit
-## 1 36005011000 Census Tract 110, Bronx County, New York   27      15
-## 2 36005013000 Census Tract 130, Bronx County, New York  537     213
-## 3 36005013200 Census Tract 132, Bronx County, New York 2251     997
-## 4 36005014400 Census Tract 144, Bronx County, New York  605     917
-## 5 36005015200 Census Tract 152, Bronx County, New York  893     395
-## 6 36005015800 Census Tract 158, Bronx County, New York  231     230
-##   Bicycle Walk Taxi Home                       geometry
-## 1       0    0    0   12 POLYGON ((-73.84007 40.8136...
-## 2       0   14    0    3 POLYGON ((-73.81889 40.8218...
-## 3       0  196    0   37 POLYGON ((-73.82751 40.8151...
-## 4       0  114    0    0 POLYGON ((-73.82946 40.8223...
-## 5       0   27    6   19 POLYGON ((-73.83094 40.8269...
-## 6       0   25    0   17 POLYGON ((-73.82168 40.8262...</code></pre>
+<img src="/post/2018-07-04-census-mapping_files/head_ny14.png" />
 <p>
 <p>Now that we’ve got mode share by Census Tract, we have to decide how to visualize it. Choropleths can be great - they can display the majority mode or candidate or race for a given geographic area, but our main focus here is on individuals, rather than generalizing by tract. Dot density maps, in which a dot symbolizing a certain number of people is plotted at random within a specific spatial shape, do a good job representing the complexity on the ground. The dominant mode share should change along a gradient, rather than a discrete scale. The algorithm below is used to generate these dots for NY-14, and is lifted directly from Paul Campbell’s excellent <a href="https://www.cultureofinsight.com/blog/2018/05/02/2018-04-08-multivariate-dot-density-maps-in-r-with-sf-ggplot2/">blog post</a>:</p>
 <pre class="r"><code>#=============
@@ -393,15 +378,7 @@ ny14_dots &lt;- ny14_dots %&gt;%
            fct_relevel(&quot;PMV&quot;,&quot;Transit&quot;,&quot;Walk&quot;,&quot;Bicycle&quot;,&quot;Taxi&quot;,&quot;Home&quot;))
 
 head(ny14_dots)</code></pre>
-<pre><code>## # A tibble: 6 x 3
-##     lon   lat Mode   
-##   &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;  
-## 1 -73.9  40.7 Transit
-## 2 -73.8  40.9 Transit
-## 3 -73.9  40.8 Transit
-## 4 -73.9  40.7 Transit
-## 5 -73.9  40.8 Transit
-## 6 -73.9  40.8 PMV</code></pre>
+<img src="/post/2018-07-04-census-mapping_files/head_ny14dots.png" />
 <p>
 <p>Armed with the dots data frame, we can now plot our map:</p>
 <pre class="r"><code>#=============
@@ -445,10 +422,7 @@ plot_ny14 &lt;- ggmap(basemap) +
 #Save high resolution picture 
 ggsave(&quot;2018-07-04-census-mapping_files/ny14_points.png&quot;,
        plot = plot_ny14,dpi = 640,width = 12, height = 12, units = &quot;in&quot;)</code></pre>
-<div class="figure">
-<img src="/post/2018-07-04-census-mapping_files/ny14_points.png" />
-
-</div>
+<p><img src="/post/2018-07-04-census-mapping_files/ny14_points.png" /></p>
 And here is the precinct breakdown from The Intercept article:
 <p>
 <img src="https://theintercept.imgix.net/wp-uploads/sites/1/2018/06/Screen-Shot-2018-06-29-at-3.17.39-PM-1530299880.png?auto=compress%2Cformat&amp;q=90" />
@@ -558,7 +532,7 @@ And here is the precinct breakdown from The Intercept article:
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2019 Sean Connelly. All Rights Reserved
+    &copy; 2020 Sean Connelly. All Rights Reserved
   </span>
 </footer>
 
@@ -775,7 +749,7 @@ And here is the precinct breakdown from The Intercept article:
     
   
     
-    <div id="cover" style="background-image:url('/images/StockSnap_River_Winter.jpg');"></div>
+    <div id="cover" style="background-image:url('/images/StockSnap_Chicago.jpg');"></div>
   
 
 
