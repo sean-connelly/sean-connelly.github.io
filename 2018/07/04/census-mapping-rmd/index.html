@@ -69,7 +69,11 @@
     
     
       
-        <link rel="stylesheet"  href="/css/cover_overlay.css">
+        <link rel="stylesheet" href="/css/cover_overlay.css">
+      
+    
+      
+        <link rel="stylesheet" href="/css/post_subtitle.css">
       
     
 
@@ -221,6 +225,7 @@
     <h1 class="post-title" itemprop="headline">
       Voters&#39; Windshield Perspective
     </h1>
+   <h3 class="post-subtitle">Mapping Mode Share in NY-14 with Tidycensus</h3>
   
   
   <div class="postShorten-meta post-meta">
@@ -378,7 +383,7 @@ ny14_dots &lt;- ny14_dots %&gt;%
            fct_relevel(&quot;PMV&quot;,&quot;Transit&quot;,&quot;Walk&quot;,&quot;Bicycle&quot;,&quot;Taxi&quot;,&quot;Home&quot;))
 
 head(ny14_dots)</code></pre>
-<img src="/post/2018-07-04-census-mapping_files/head_ny14dots.png" />
+<p><img src="/post/2018-07-04-census-mapping_files/head_ny14dots.png" /></p>
 <p>
 <p>Armed with the dots data frame, we can now plot our map:</p>
 <pre class="r"><code>#=============
